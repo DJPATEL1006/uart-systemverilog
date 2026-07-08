@@ -1,0 +1,19 @@
+# Simulation outputs
+*.vcd
+*.fst
+
+# Compiled files
+*.vvp
+*.out
+
+# GTKWave
+*.gtkw
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Temporary files
+*.log
