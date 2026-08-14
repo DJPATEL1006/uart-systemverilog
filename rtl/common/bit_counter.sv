@@ -1,3 +1,19 @@
+/******************************************************************************
+ * File        : bit_counter.sv
+ * Author      : Divyam Patel and Foram Patel
+ * Date        : 08-07-2026
+ *
+ * Description :
+ * Generic bit counter shared by both uart_tx and uart_rx. Increments once
+ * per `enable` pulse and asserts `done` once BITS_NUM bits have been
+ * counted, signalling the FSM to move from the DATA state to PARITY.
+ * `clear` resets the count back to 0 synchronously.
+ *
+ * Parameters :
+ *  - BITS_NUM : Number of data bits per frame (must be >= 2)
+ *
+ ******************************************************************************/
+
 module bit_counter #(parameter int unsigned BITS_NUM = 8)(
     input logic clk,
     input logic rst,

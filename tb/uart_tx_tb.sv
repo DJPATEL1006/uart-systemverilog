@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module uart_tb #(parameter int unsigned BITS_NUM = 8);
+module uart_tx_tb #(parameter int unsigned BITS_NUM = 8);
 
 //testbench signals
 logic clk;
@@ -35,7 +35,7 @@ end
 
 initial begin
     $dumpfile("uart_tx.vcd");
-    $dumpvars(0,uart_tb);
+    $dumpvars(0,uart_tx_tb);
 end
 
 initial begin
